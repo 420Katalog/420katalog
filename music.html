@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10130f">
+    <meta name="description" content="Enter the underground sound of XANSINMYKSUBIS on 420Katalog.">
+    <title>MUSIC — 420Katalog</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .music-page {
+            min-height: 100vh;
+            background: #10130f;
+            color: #f5f5ef;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .music-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 24px 7%;
+            border-bottom: 1px solid rgba(255,255,255,.12);
+        }
+
+        .music-nav a {
+            color: #c8ff65;
+            text-decoration: none;
+        }
+
+        .music-hero {
+            max-width: 1000px;
+            margin: auto;
+            padding: 90px 24px 70px;
+            text-align: center;
+        }
+
+        .music-label {
+            color: #c8ff65;
+            letter-spacing: .25em;
+            font-size: .75rem;
+            text-transform: uppercase;
+        }
+
+        .music-hero h1 {
+            font-size: clamp(3rem, 10vw, 7rem);
+            line-height: .95;
+            margin: 24px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .music-hero h1 span {
+            color: #c8ff65;
+        }
+
+        .music-description {
+            max-width: 560px;
+            margin: 0 auto 36px;
+            color: #b7b9b0;
+            line-height: 1.8;
+        }
+
+        .featured-track {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 22px;
+            background: #191d17;
+            border: 1px solid rgba(200,255,101,.25);
+            border-radius: 18px;
+            text-align: left;
+        }
+
+        .track-label {
+            color: #c8ff65;
+            font-size: .75rem;
+            letter-spacing: .15em;
+            margin-bottom: 10px;
+        }
+
+        .featured-track h2 {
+            font-size: clamp(1.3rem, 4vw, 2rem);
+            margin: 0 0 18px;
+        }
+
+        .soundcloud-frame {
+            width: 100%;
+            height: 166px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        .music-button {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 14px 22px;
+            border-radius: 6px;
+            background: #c8ff65;
+            color: #10130f;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform .2s ease;
+        }
+
+        .music-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .music-footer {
+            padding: 30px 20px;
+            text-align: center;
+            color: #85897f;
+            font-size: .85rem;
+            border-top: 1px solid rgba(255,255,255,.1);
+        }
+
+        @media (max-width: 600px) {
+            .music-nav {
+                padding: 20px;
+            }
+
+            .music-hero {
+                padding: 65px 18px 45px;
+            }
+
+            .featured-track {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="music-page">
+
+    <nav class="music-nav" aria-label="Music page navigation">
+        <a href="index.html"><strong>420KATALOG</strong></a>
+        <a href="index.html">← BACK TO HOME</a>
+    </nav>
+
+    <main>
+        <section class="music-hero">
+            <p class="music-label">420KATALOG PRESENTS · INDEPENDENT SOUND</p>
+
+            <h1>XANSINMY<span>KSUBIS</span></h1>
+
+            <p class="music-description">
+                No rules. No boundaries. Just sound.
+                Step into the world of XANSINMYKSUBIS.
+            </p>
+
+            <div class="featured-track">
+                <p class="track-label">FEATURED RELEASE / 001</p>
+
+                <h2>WEREWOLVES</h2>
+
+                <iframe
+                    class="soundcloud-frame"
+                    title="WEREWOLVES by XANSINMYKSUBIS"
+                    allow="autoplay"
+                    loading="lazy"
+                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/xansinmyksubis/whon-4-dha-win-x-teenagesoultransfer-werewolves&color=%23c8ff65&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false">
+                </iframe>
+
+                <a
+                    class="music-button"
+                    href="https://soundcloud.com/xansinmyksubis"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    EXPLORE ALL RELEASES ↗
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="music-footer">
+        420KATALOG · EUPHORIC LIFESTYLE · INDEPENDENT SOUND
+    </footer>
+
+</div>
+</body>
+</html>
