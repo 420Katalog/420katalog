@@ -112,15 +112,16 @@
             line-height: 1.8;
         }
 
-        .featured-track {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 22px;
-            background: #1c1c1c;
-            border: 1px solid rgba(180,180,180,.25);
-            border-radius: 18px;
-            text-align: left;
-        }
+    .featured-track {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 22px;
+    background: rgba(28, 28, 28, .85);
+    border: 1px solid rgba(180, 180, 180, .2);
+    border-radius: 8px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .25);
+    text-align: left;
+}
 
         .track-label {
             color: 	#a6a6a6;
@@ -141,22 +142,26 @@
             border-radius: 10px;
         }
 
-    .music-button {
+.music-button {
     display: inline-block;
     margin-top: 24px;
     padding: 14px 22px;
-    border-radius: 6px;
-    background: #a6a6a6;
-    color: #111111;
+    border: 1px solid #999999;
+    border-radius: 2px;
+    background: transparent;
+    color: #e5e5e5;
     font-weight: 700;
+    letter-spacing: .08em;
     text-decoration: none;
-    transition: transform .2s ease;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.music-button:hover {
+    background: #e5e5e5;
+    color: #111111;
+    transform: translateY(-2px);
 }
     
-
-        .music-button:hover {
-            transform: translateY(-2px);
-        }
 
         .music-footer {
             padding: 30px 20px;
@@ -166,20 +171,32 @@
             border-top: 1px solid rgba(255,255,255,.1);
         }
 
-        @media (max-width: 600px) {
-            .music-nav {
-                padding: 20px;
-            }
+    @media (max-width: 600px) {
+    .music-nav {
+        padding: 20px;
+        flex-wrap: wrap;
+        font-size: .8rem;
+    }
 
-            .music-hero {
-                padding: 65px 18px 45px;
-            }
+    .music-hero {
+        padding: 65px 18px 45px;
+    }
 
-            .featured-track {
-                padding: 16px;
-            }
-        }
-    </style>
+    .featured-track {
+        padding: 16px;
+    }
+
+    .music-label {
+        line-height: 1.8;
+        letter-spacing: .15em;
+    }
+
+      .artist-subtitle {
+        line-height: 1.8;
+        letter-spacing: .15em;
+    }
+}
+</style>
 </head>
 <body>
     <div class="music-page">
