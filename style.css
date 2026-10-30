@@ -236,3 +236,22 @@ h2 { margin-bottom: 0; font-size: clamp(2.5rem, 4.4vw, 4.15rem); font-weight: 60
 .footer-tagline { color: var(--green); font-size: 13px; font-weight: 700; }
 .footer-tagline span { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; font-weight: 400; }
 @media (max-width: 600px) { .slogan-chip { margin-bottom: 18px; font-size: 9px; } .ticker-track { gap: 20px; padding-block: 13px; font-size: 9px; } }
+.gallery-photo {
+    margin: 30px auto;
+    max-width: 500px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.gallery-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-photo img:hover {
+    transform: scale(1.03);
+}
