@@ -173,7 +173,132 @@
             border-top: 1px solid rgba(255,255,255,.1);
         }
 
-    @media (max-width: 600px) {
+.whon-section {
+    position: relative;
+    overflow: hidden;
+    padding: 85px 24px;
+    color: #E8DDBB;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(196,119,61,.13), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(185,161,90,.12), transparent 35%),
+        #252B1C;
+    border-top: 1px solid rgba(185,161,90,.3);
+}
+
+.whon-inner {
+    max-width: 1050px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.whon-eyebrow {
+    color: #C4773D;
+    text-align: center;
+    font-size: .7rem;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+}
+
+.whon-title {
+    margin: 25px 0 12px;
+    color: #E8DDBB;
+    font-family: Georgia, serif;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -.06em;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 #35432A, 6px 6px 0 rgba(196,119,61,.5);
+}
+
+.whon-subtitle {
+    color: #B9A15A;
+    text-align: center;
+    letter-spacing: .3em;
+    font-size: .75rem;
+    line-height: 1.8;
+}
+
+.whon-description {
+    max-width: 600px;
+    margin: 28px auto 45px;
+    color: #C8BEA0;
+    text-align: center;
+    line-height: 1.9;
+}
+
+.whon-artwork {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 45px 0;
+}
+
+.whon-art-placeholder {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid rgba(185,161,90,.35);
+    background:
+        radial-gradient(circle, rgba(196,119,61,.2), transparent 65%),
+        #35432A;
+    color: #B9A15A;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: .85rem;
+    letter-spacing: .12em;
+}
+
+.whon-track {
+    max-width: 760px;
+    margin: 45px auto 0;
+    padding: 28px;
+    background: rgba(15,20,12,.65);
+    border: 1px solid rgba(185,161,90,.4);
+    box-shadow: 0 15px 40px rgba(0,0,0,.3);
+}
+
+.whon-track-label {
+    color: #C4773D;
+    font-size: .7rem;
+    letter-spacing: .25em;
+}
+
+.whon-track h3 {
+    margin: 12px 0 20px;
+    color: #E8DDBB;
+    font-family: Georgia, serif;
+    font-size: clamp(1.6rem, 5vw, 2.5rem);
+}
+
+.whon-player {
+    width: 100%;
+    height: 166px;
+    border: 0;
+}
+
+.whon-button {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 13px 22px;
+    border: 1px solid #B9A15A;
+    color: #E8DDBB;
+    text-decoration: none;
+    letter-spacing: .12em;
+    font-size: .8rem;
+    transition: .2s ease;
+}
+
+.whon-button:hover {
+    background: #B9A15A;
+    color: #252B1C;
+}
+
+@media (max-width: 600px) {
     .music-nav {
         padding: 20px;
         flex-wrap: wrap;
@@ -192,13 +317,31 @@
         line-height: 1.8;
         letter-spacing: .15em;
     }
-.artist-title {
-    font-size: clamp(1.2rem, 6vw, 2.2rem);
-    letter-spacing: -1.5px;
-}
-      .artist-subtitle {
+
+    .artist-title {
+        font-size: clamp(1.2rem, 6vw, 2.2rem);
+        letter-spacing: -1.5px;
+    }
+
+    .artist-subtitle {
         line-height: 1.8;
         letter-spacing: .15em;
+    }
+
+    .whon-section {
+        padding: 65px 18px;
+    }
+
+    .whon-artwork {
+        grid-template-columns: 1fr;
+    }
+
+    .whon-art-placeholder {
+        min-height: 180px;
+    }
+
+    .whon-track {
+        padding: 18px;
     }
 }
 </style>
