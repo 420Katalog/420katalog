@@ -137,8 +137,48 @@
             }
         }
     </style>
-</head>
+/* UNDERGROUND ARTIST IDENTITY */
 
+.artist-title {
+    position: relative;
+    font-size: clamp(2.5rem, 8vw, 7rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -4px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #e5e5e5;
+    margin: 40px auto 18px;
+    text-shadow: 3px 3px 0 #444;
+    animation: titleFlicker 5s infinite;
+}
+
+.artist-title span {
+    color: #999;
+    text-shadow: 2px 2px 0 #333;
+}
+
+.artist-subtitle {
+    color: #858585;
+    letter-spacing: .3em;
+    font-size: .7rem;
+    text-align: center;
+}
+
+@keyframes titleFlicker {
+    0%, 94%, 100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    95% {
+        opacity: .8;
+        transform: translateX(2px);
+    }
+    97% {
+        opacity: 1;
+        transform: translateX(-2px);
+    }
+}
 <body>
 <div class="music-page">
 
@@ -150,8 +190,13 @@
     <main>
         <section class="music-hero">
             <p class="music-label">420KATALOG PRESENTS · INDEPENDENT SOUND</p>
-<h1 class="artist-title">
+<h1 class="artist-title" data-text="TEENAGESOULTRANSFER">
     TEENAGE<span>SOULTRANSFER</span>
+</h1>
+
+<p class="artist-subtitle">
+    INDEPENDENT SOUND · UNDERGROUND CULTURE
+</p>
 </h1>
 <p class="music-description">
     No rules. No boundaries. Just sound.
@@ -165,7 +210,11 @@
 
                 <iframe
                     class="soundcloud-frame"
-                    title="WEREWOLVES by XANSINMYKSUBIS"
+                  <h2>WEREWOLVES</h2>
+
+<p class="track-label">
+    TEENAGESOULTRANSFER X WHON 4 DHA WIN
+</p>
                     allow="autoplay"
                     loading="lazy"
                     src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/xansinmyksubis/whon-4-dha-win-x-teenagesoultransfer-werewolves&color=%23c8ff65&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false">
@@ -224,4 +273,74 @@
         letter-spacing: -2px;
         overflow-wrap: anywhere;
     }
+}
+.music-page {
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #252525 0%,
+            #101010 45%,
+            #050505 100%
+        );
+    position: relative;
+    overflow: hidden;
+}
+
+.music-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .12;
+    z-index: 0;
+
+    background-image:
+        repeating-radial-gradient(
+            circle at 20% 30%,
+            transparent 0,
+            rgba(255,255,255,.15) 1px,
+            transparent 2px,
+            transparent 4px
+        );
+
+    background-size: 7px 7px;
+}
+
+.music-page main,
+.music-page nav,
+.music-page footer {
+    position: relative;
+    z-index: 1;
+}
+
+.featured-track {
+    background: rgba(15,15,15,.9);
+    border: 1px solid #555;
+    border-radius: 3px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.6);
+}
+
+.track-label {
+    color: #aaa;
+    letter-spacing: .25em;
+}
+
+.featured-track h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: #e5e5e5;
+    text-shadow: 3px 3px 0 #444;
+}
+
+.music-button {
+    background: #d0d0d0;
+    color: #080808;
+    border-radius: 2px;
+    letter-spacing: .08em;
+}
+
+.music-button:hover {
+    background: #fff;
+    transform: translateY(-3px);
 }
