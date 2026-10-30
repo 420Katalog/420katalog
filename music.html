@@ -17,17 +17,19 @@
      /* UNDERGROUND ARTIST IDENTITY */
 
 .artist-title {
+    display: block;
+    width: 100%;
     position: relative;
-    font-size: clamp(2rem, 7vw, 6rem);
+    font-size: clamp(1.4rem, 5.5vw, 5rem);
     font-weight: 900;
     line-height: 1.1;
-    letter-spacing: clamp(-4px, -0.3vw, -1px);
+    letter-spacing: -1px;
     text-align: center;
     text-transform: uppercase;
+    white-space: nowrap;
     color: #e5e5e5;
     margin: 40px auto 18px;
     text-shadow: 3px 3px 0 #444;
-    overflow-wrap: anywhere;
     animation: titleFlicker 5s infinite;
 }
 
